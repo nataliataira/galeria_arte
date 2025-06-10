@@ -26,9 +26,8 @@ export function main() {
             "           3 - Buscar obra por código       \n",
             "           4 - Atualizar dados de obra      \n",
             "           5 - Apagar registro de obra      \n",
-            "           6 - Comprar obra                 \n",
-            "           7 - Ver obras em exposição               \n",
-            "           8 - Sair                                 \n",
+            "           6 - Ver obras em exposição               \n",
+            "           7 - Sair                                 \n",
             "                                                    \n",
             "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
         );
@@ -36,7 +35,7 @@ export function main() {
         console.log('Digite a opção desejada: ');
         opcao = readlinesync.questionInt('', {limitMessage: 'Digite uma opção válida.'});
 
-        if (opcao === 8) {
+        if (opcao === 7) {
             sobre();
             process.exit(0);
         }
@@ -209,10 +208,6 @@ export function main() {
                 break;
 
             case 6:
-                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
-                console.log("\n\nComprar obra\n\n");
-                break;
-            case 7:
                 console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("\n\nVer obras em exposição\n\n");
                 break;
