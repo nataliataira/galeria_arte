@@ -4,22 +4,15 @@ import { Escultura } from "./model/Escultura";
 import { ObraDeArteController } from "./controller/ObraDeArteController";
 
 export function main() {
-    let opcao: number;
+    let opcao: number, codigo : number, preco : number;
+    let temMoldura : boolean, temBase : boolean;
+    let titulo : string, artista : string, tecnica : string, material : string;
 
-    let controller = new ObraDeArteController;
-    let obra1 = new Quadro(1, "Mona Lisa", "Leonardo Da Vinci", 277000000000000000.00, true, "sfumato");
-    let obra2 = new Escultura(2, "Estátua de David", "Michelangelo", 5436780000000.00, true, "mármore");
+    let obras: ObraDeArteController = new ObraDeArteController();
+    const tipoObra : string[] = ["Quadro", "Escultura"];
 
-    obra1.visualizarInformacoes();
-    obra2.visualizarInformacoes();
+    let tipo : number = 1;
 
-    let atualiza = obra1;
-    obra1.titulo = "oi";
-    controller.cadastrar(obra1);
-    controller.cadastrar(obra2);
-    controller.atualizar(atualiza);
-    controller.deletar(1);
-    
     while (true) {
         console.log("\n",
             "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
@@ -28,13 +21,13 @@ export function main() {
             "                                                    \n",
             "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
             "                                                    \n",
-            "           1 - Cadastrar obra de arte            \n",
-            "           2 - Listar todas obras de arte           \n",
-            "           3 - Buscar obra de arte por código       \n",
-            "           4 - Atualizar dados de obra de arte      \n",
-            "           5 - Apagar registro de obra de arte      \n",
-            "           6 - Comprar obra de arte                 \n",
-            "           7 - Ver obra de arte                     \n",
+            "           1 - Cadastrar obra            \n",
+            "           2 - Listar todas obras           \n",
+            "           3 - Buscar obra por código       \n",
+            "           4 - Atualizar dados de obra      \n",
+            "           5 - Apagar registro de obra      \n",
+            "           6 - Comprar obra                 \n",
+            "           7 - Ver obras em exposição               \n",
             "           8 - Sair                                 \n",
             "                                                    \n",
             "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
@@ -51,27 +44,178 @@ export function main() {
 
         switch (opcao) {
             case 1:
-                console.log("\n\nCadastrar obra de arte\n\n");
+                console.log("\n\nCadastrar Obra\n\n");
+
+                console.log("Digite o título da obra: ");
+                titulo = readlinesync.question("");
+
+                console.log("\nDigite o nome do artista: ");
+                artista = readlinesync.question("");
+
+                console.log("\nDigite o valor da obra: ");
+                preco = readlinesync.questionFloat("");
+
+                tipo += readlinesync.keyInSelect(
+                    tipoObra, 
+                    'Qual tipo de obra que desja cadastrar?', {
+                        limitMessage:"Escolha uma opcao válida",
+                        cancel:"Voltar ao menu"
+                    }
+                );
+
+                switch (tipo) {
+                    case 1:
+                        tecnica = readlinesync.question("Digite a técnica: ");
+                
+                        temMoldura = readlinesync.keyIn(
+                            "Esse quadro possui moldura? [s/n] ", {
+                                limit: "snSN",
+                                limitMessage:"Escolha uma opção válida",
+                                caseSensitive: false
+                        }).toLowerCase() === "s";
+                    
+                        obras.cadastrar(
+                            new Quadro(
+                                obras.gerarIdSeq(), 
+                                titulo, 
+                                artista, 
+                                preco, 
+                                tipo,
+                                temMoldura, 
+                                tecnica
+                            )
+                        );
+
+                        break;
+            
+                    case 2:
+                        material = readlinesync.question("Digite o material: ");
+        
+                        temBase = readlinesync.keyIn(
+                            "Essa escultura possui base? [s/n] ", {
+                                limit: "snSN",
+                                limitMessage:"Escolha uma opção válida",
+                                caseSensitive: false
+                        }).toLowerCase() === "s";
+
+                        obras.cadastrar(
+                            new Escultura(
+                                obras.gerarIdSeq(), 
+                                titulo, 
+                                artista, 
+                                preco, 
+                                tipo,
+                                temBase, 
+                                material
+                            )
+                        );
+                        
+                        break;
+                }
                 break;
+
             case 2:
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("\n\nListar todas obras de arte\n\n");
+                obras.listarTodas();
                 break;
+
             case 3:
-                console.log("\n\nListar todas obras de arte\n\n");
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+                console.log("\n\nListar obras de arte por código\n\n");
+                codigo = readlinesync.questionInt("Digite o código da obra: ");
+                obras.buscarPorId(codigo);
                 break;
+
             case 4:
-                console.log("\n\nListar todas obras de arte\n\n");
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+                console.log("\n\nAtualizar dados de uma obras de arte\n\n");
+                codigo = readlinesync.questionInt("Digite o código da obra: ");
+
+                let obra = obras.buscarNoArray(codigo);
+
+                if (obra != null) {
+                    console.log("Digite o título da obra: ");
+                    titulo = readlinesync.question("");
+
+                    console.log("\nDigite o nome do artista: ");
+                    artista = readlinesync.question("");
+
+                    console.log("\nDigite o valor da obra: ");
+                    preco = readlinesync.questionFloat("");
+
+                    tipo = obra.tipo;
+                    
+                    switch (tipo) {
+                        case 1:
+                            tecnica = readlinesync.question("Digite a técnica: ");
+
+                            temMoldura = readlinesync.keyIn(
+                                "Esse quadro possui moldura? [s/n] ", {
+                                    limit: "snSN",
+                                    limitMessage:"Escolha uma opção válida",
+                                    caseSensitive: false
+                            }).toLowerCase() === "s";
+
+                            obras.atualizar(
+                                new Quadro(
+                                    codigo, 
+                                    titulo, 
+                                    artista, 
+                                    preco, 
+                                    tipo, 
+                                    temMoldura, 
+                                    tecnica
+                                )
+                            );
+
+                            break;
+
+                        case 2:
+                            material = readlinesync.question("Digite o material: ");
+
+                            temBase = readlinesync.keyIn(
+                                "Essa escultura possui base? [s/n] ", {
+                                    limit: "snSN",
+                                    limitMessage:"Escolha uma opção válida",
+                                    caseSensitive: false
+                            }).toLowerCase() === "s";
+    
+                            obras.atualizar(
+                                new Escultura(
+                                    codigo, 
+                                    titulo, 
+                                    artista, 
+                                    preco, 
+                                    tipo,
+                                    temBase, 
+                                    material
+                                )
+                            );
+
+                            break;
+                    }
+
+                }
                 break;
+
             case 5:
-                console.log("\n\nListar todas obras de arte\n\n");
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+                console.log("\n\nApagar resgitro de obra de arte\n\n");
+                codigo = readlinesync.questionInt("Digite o código da obra: ");
+                obras.deletar(codigo);
                 break;
+
             case 6:
-                console.log("\n\nListar todas obras de arte\n\n");
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+                console.log("\n\nComprar obra\n\n");
                 break;
             case 7:
-                console.log("\n\nListar todas obras de arte\n\n");
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+                console.log("\n\nVer obras em exposição\n\n");
                 break;
             default:
+                console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("Opção Inválida!");
         }
     }
