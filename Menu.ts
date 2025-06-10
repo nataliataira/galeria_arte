@@ -1,18 +1,27 @@
 import readlinesync = require("readline-sync");
 import { Quadro } from "./model/Quadro";
 import { Escultura } from "./model/Escultura";
+import { ObraDeArteController } from "./controller/ObraDeArteController";
 
 export function main() {
     let opcao: number;
 
+    let controller = new ObraDeArteController;
     let obra1 = new Quadro(1, "Mona Lisa", "Leonardo Da Vinci", 277000000000000000.00, true, "sfumato");
     let obra2 = new Escultura(2, "Estátua de David", "Michelangelo", 5436780000000.00, true, "mármore");
 
     obra1.visualizarInformacoes();
     obra2.visualizarInformacoes();
+
+    let atualiza = obra1;
+    obra1.titulo = "oi";
+    controller.cadastrar(obra1);
+    controller.cadastrar(obra2);
+    controller.atualizar(atualiza);
+    controller.deletar(1);
     
     while (true) {
-        console.log(
+        console.log("\n",
             "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
             "                                                    \n",
             "                  N. Art Galeria                    \n",
