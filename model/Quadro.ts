@@ -4,8 +4,8 @@ export class Quadro extends ObraDeArte {
     private _temMoldura: boolean
     private _tecnica: string;
 
-    constructor(codigo : number, titulo : string, artista : string, preco : number, temMoldura : boolean, tecnica : string) {
-        super(codigo, titulo, artista, preco);
+    constructor(codigo : number, titulo : string, artista : string, preco : number, tipo : number, temMoldura : boolean, tecnica : string) {
+        super(codigo, titulo, artista, preco, tipo);
         this._temMoldura = temMoldura;
         this._tecnica = tecnica;
     }
@@ -27,9 +27,9 @@ export class Quadro extends ObraDeArte {
     }
 
     public visualizarInformacoes(): void {
+        console.log(`           Quadro ${super.codigo}\n`);
         super.visualizarInformacoes();
         console.log(`           Técnica: ${this._tecnica}`);
         console.log(`           Tem moldura: ${this._temMoldura}\n`);
-        console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
     }
 }

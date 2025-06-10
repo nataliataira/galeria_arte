@@ -4,8 +4,8 @@ export class Escultura extends ObraDeArte {
     private _temBase: boolean;
     private _material: string;
 
-    constructor(codigo : number, titulo : string, artista : string, preco : number, temBase : boolean, material : string) {
-        super(codigo, titulo, artista, preco);
+    constructor(codigo : number, titulo : string, artista : string, preco : number, tipo : number, temBase : boolean, material : string) {
+        super(codigo, titulo, artista, preco, tipo);
         this._temBase = temBase;
         this._material = material;
     }
@@ -27,9 +27,9 @@ export class Escultura extends ObraDeArte {
     }
 
     public visualizarInformacoes(): void {
+        console.log(`           Escultura ${super.codigo}\n`);
         super.visualizarInformacoes();
         console.log(`           Material: ${this._material}`);
         console.log(`           Tem Base: ${this._temBase}\n`);
-        console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
     }
 }
