@@ -19,6 +19,21 @@ export function mostrarMenu(): void {
   `);
 }
 
+export function mostrarMenuExpo(): void {
+    console.clear();
+    console.log(`
+  ✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦
+  
+    1 - Mona Lisa
+    2 - O Nascimento de Vênus
+    3 - Peixes
+    4 - Tuntacamon
+    5 - Sair
+  
+  ✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦
+  `);
+}
+
 export function obterString(msg: string): string {
     return readlinesync.question(msg);
 }
