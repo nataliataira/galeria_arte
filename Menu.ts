@@ -1,4 +1,5 @@
 import readlinesync = require("readline-sync");
+import { mostrarMenu} from "./utils/Auxiliar"
 import { Quadro } from "./model/Quadro";
 import { Escultura } from "./model/Escultura";
 import { ObraDeArteController } from "./controller/ObraDeArteController";
@@ -14,23 +15,7 @@ export function main() {
     let tipo : number = 1;
 
     while (true) {
-        console.log("\n",
-            "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
-            "                                                    \n",
-            "                  N. Art Galeria                    \n",
-            "                                                    \n",
-            "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
-            "                                                    \n",
-            "           1 - Cadastrar obra            \n",
-            "           2 - Listar todas obras           \n",
-            "           3 - Buscar obra por código       \n",
-            "           4 - Atualizar dados de obra      \n",
-            "           5 - Apagar registro de obra      \n",
-            "           6 - Ver obras em exposição               \n",
-            "           7 - Sair                                 \n",
-            "                                                    \n",
-            "✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦\n",
-        );
+        mostrarMenu();
 
         console.log('Digite a opção desejada: ');
         opcao = readlinesync.questionInt('', {limitMessage: 'Digite uma opção válida.'});
