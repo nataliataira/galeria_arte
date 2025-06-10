@@ -45,7 +45,7 @@ export class ObraDeArteController implements ObraDeArteRepository {
         console.log(`\nA Obra com codigo: ${codigo} não foi encontrada!`);
     }
 
-    private buscarNoArray(codigo: number): ObraDeArte | null {
+    public buscarNoArray(codigo: number): ObraDeArte | null {
 
         for (let obra of this.listaObras)   {
             if (obra.codigo === codigo) return obra;
@@ -53,7 +53,7 @@ export class ObraDeArteController implements ObraDeArteRepository {
         return null;
     }
 
-    public geraridSeq(): number {
+    public gerarIdSeq(): number {
         return ++this.idSeq;
     }
 }
