@@ -37,7 +37,6 @@ export function main() {
         opcao = readlinesync.questionInt('', {limitMessage: 'Digite uma opção válida.'});
 
         if (opcao === 8) {
-            console.log("               Obrigado por visitar a N.Art\n");
             sobre();
             process.exit(0);
         }
@@ -55,13 +54,16 @@ export function main() {
                 console.log("\nDigite o valor da obra: ");
                 preco = readlinesync.questionFloat("");
 
-                tipo += readlinesync.keyInSelect(
+                tipo = readlinesync.keyInSelect(
                     tipoObra, 
                     'Qual tipo de obra que desja cadastrar?', {
                         limitMessage:"Escolha uma opcao válida",
                         cancel:"Voltar ao menu"
                     }
                 );
+
+                if (tipo === -1) break;
+                tipo++;
 
                 switch (tipo) {
                     case 1:
@@ -224,6 +226,7 @@ export function main() {
 }
 
 export function sobre(): void {
+    console.log("               Obrigado por visitar a N.Art\n");
     console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
     console.log("           Projeto Desenvolvido por: Natalia Gomes Taira ");
     console.log("          Generation Brasil - nataliagtaira@gmail.com");
