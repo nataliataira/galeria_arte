@@ -195,14 +195,50 @@ export function main() {
             case 6:
                 console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("\n\nVer obras em exposição\n\n");
+                console.log(`
+                    
+                      1 - Moça com Brinco de Pérola
+                      2 - Mona Lisa
+                      3 - O Nascimento de Vênus
+                      4 - Peixes6
+                      5 - Tuntacamon
+                      6 - Sair
+                    `);
+                let quadro = readlinesync.questionInt("Digite o número do quadro que deseja ver: ");
+
+                if (quadro === 6)  break;
+                
+                switch (quadro) {
+                    case 1:
+                        console.log(`quadro ${quadro}`);
+                        const path = require("path");
+                 
+                        console.log(require('fs').readFileSync(path.resolve(__dirname, "./quadros/mona_lisa.txt"), 'utf8'));
+                        break;
+                    case 2:
+                        console.log(require('fs').readFileSync('./quadros/mona_lisa.txt', 'utf8'));
+                        break;
+                    case 3:
+                        console.log(require('fs').readFileSync('./quadros/o_nascimento_de_venus.txt', 'utf8'));
+                        break;
+                    case 4:
+                        console.log(require('fs').readFileSync('./quadros/peixes.txt', 'utf8'));
+                        break;
+                    case 5:
+                        console.log(require('fs').readFileSync('./quadros/tuntacamon.txt', 'utf8'));
+                        break;
+                    default:
+                        console.log("Opção inválida");
+                        break;
+                }
+
                 break;
+
             default:
                 console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("Opção Inválida!");
         }
     }
-
-
 }
 
 export function sobre(): void {
