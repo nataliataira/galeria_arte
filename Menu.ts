@@ -203,7 +203,8 @@ export function main() {
                 console.log("\n\nVer obras em exposição\n\n");
                 mostrarMenuExpo();
 
-                let quadro = readlinesync.questionInt("Digite o número do quadro: ");
+                console.log("Para uma experiência melhor, use o terminal em tela cheia");
+                let quadro = readlinesync.questionInt("Agora digite o número do quadro: ");
 
                 if (quadro === 5)  break;
                 
