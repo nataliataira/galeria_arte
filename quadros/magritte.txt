@@ -1,0 +1,54 @@
+                ..  ........        ..........    ....  ..    ....  ..--..--........  ..    ....................  ..  ..    ....  ..        
+                ........................  ..                  mmmmMMMMMMMMMM++........    ......................  ..                        
+                  ..........  ............                MMMMMMMMMMMM@@@@@@@@##--        ....................  ..                          
+              ....  ..  ................  ..            mmMMMMMMMM@@@@@@##########      ......................                              
+    ........    ..........................              MMMM@@@@@@##################      ................  ..                              
+....................------..................    ....  MM@@@@@@######################    ..........................                          
+....--..--..--......----..--..........................@@@@##########################....  ........        ..........                        
+....------................----....--..--..............@@@@##########################..                      ........                        
+------------........--......----......----............##############################      ..                ......                          
+--------------..----------..--------..................##++++::############++++::::++++          ..          ....                            
+----::------------------..--....................--..--####::::::MMmmmmMMMMmm++mm++++                        ....                            
+--::--::--------------------..----..----..--..--------mm::::++::::::::MM@@++MM####@@MM######                                                
+------------------..--------------......--..--########@@MMmmmm++++--@@::++++++mm############    ..  ..                                      
+------------------..--------------..--..--........######@@mmmmmm++++mm@@--++++@@mm####--..........                                          
+------------....----------------....--..........------++  ..++::++::MMMM..++++MMmm##    ............  ..                                    
+..----............--..------------............------++--  ++::++mm++MMMMMM++mm@@MM##MM..  ........  ....                                    
+..........................------............--------++..  ::++::@@MM@@++mm++mm@@MMMMMM------....  ....                                      
+..........--..........--..............--....------------  ::++......----::mm::@@mmmmmm..------....                                          
+      ..............----....................--------..          ......--::++MMMMMMmm  ......--......                                        
+    ..........--................    ............--....::  ....  ......--::++@@mmmm++        ..                                              
+  ..........--..----..........            ....              ..........--::mm@@++MMmm                                                        
+..........--................                                --......----::MM@@++MM..                                                        
+............................                                ::------::::mm@@MMmmMM                                                          
+    ..................    ....                                ++++++++mm@@@@mmmmMM                                                          
+  ..............  ..  ..                                        mmMM@@@@MM++mmmm--                                                          
+        ....  ..  ....                                    ..    ....--::mmmmmmMM@@                                                          
+                    ..  ..                                ....      ..::mmmmMMmm@@                                                          
+                                                        mm    --..--::mmmmMMmm--@@@@                                                        
+                                                      ..mm        ::mmMMmmmm::  @@##                                        ..              
+                                                      mmMM          ......      ######                                ..  ....              
+                                                    mmmmMM--                    ########MM                            ..    ..              
+                                                MMMMmmmmMM@@        ++          ########@@@@                                                
+                                          ::mmmmMMmmMMMMMM@@        ++::        ########MMMMMMMM                                            
+                                      mmmmmmmmMMMMmmMMMMMMMM--    mm++mm      ::######@@@@@@MMMMMMmmmm                                      
+                                mmmmMMmmmmmmmmMM@@MMMMMMMMMM::      ++++      MM####@@@@##@@MMMMMMMMMMMMMM                                  
+                            ++mmmmMMmmmmMMmmMMMM@@mmmmMMMMMM::      mm        ######@@@@@@@@MMMMMMMMMMMMMMMMMM                              
+                          ++MMmmmmmmMMmmmmmmMMMM@@MMmmMMMMMM##    --++++      ######@@MM@@##@@MMMMMMMMMMMMMMMM@@                            
+                          mmMMmmmmMMMMMMmmmmMMMMMMMMMMMMMMMM@@    ++++++    ..######@@MM@@@@MMMMMMMMMMMMMM@@MMMM@@                          
+                        mmmmMMmmmmmmMMMMMMMMMMMMMMMMMMMMMMMMMM    ++++++..  MM####@@@@MM##MMMMMMMMMMMMMMMM@@MMMM@@                          
+                        mmMMMMmmmmmmMMMMMMMMMMMMMM@@MMMMMMMMMM--  ++++++--  ######@@MM@@@@@@MMMMMMMMMMMM@@MMMMMM@@##                        
+                        mmmmMM@@mmmmMMMMMMMMmmMMMM@@MMMMMMMM@@##  ++++mmmm  ######@@@@##MMMMMMMMMMMMMMMM##MMMMMM@@##                        
+                        mmmmMM##mmmmmmMMMMMMMMmmmmMM@@MM@@MMMM##  ++++mmmmMM####@@@@MM##@@MMMMMMMMMMMM@@@@@@MM@@@@##                        
+                      ::mmmmMM@@mmmmmmMMMMMMMMMMMMMM@@MM@@MMMMMM  ++mmmm++@@####@@MM##@@MMMMMMMMMMMMMM@@@@##MM@@@@##                        
+                      ++mmMMMM####MMmmMMMMMMMMMMMMMMMM@@MMMM@@@@++++++++++@@##@@@@MM##MMMMMMMMMMMMMM@@##@@##MM@@####++                      
+                      mmmmMMMM@@##MMmmmmMMMMMMMMMMMMMM##MMMM@@@@##++++++MM@@##@@MM##@@MM@@MMMMMMMMMM########MM@@######                      
+                      mmmmMMMM####mmmmMMMMMMMMMMMMMMMMMMMM@@@@@@@@++++++@@##@@@@mm##MMMMMMMMMMMMMM@@##@@####MM@@######                      
+                      mmmmMMMM####mmmmmmMMMMMMMMMMmmMMMM##MM@@@@@@@@++++@@##@@MM##@@MM@@MMMM@@MMMM@@##@@##@@MM@@######                      
+                      ++mmMM@@@@##@@mmmmMMMMmmMMmmMMMMMMMM@@@@@@@@##++MM@@@@@@MM@@MM@@MMMMMM@@MM@@####@@##@@MM@@######                      
+                      ++mmMM@@@@####mmmmMMMMmmmmmmmmMMMMMM@@MM@@@@##mmMM##@@MM##@@MMMMMMMMMM@@MM@@####@@##@@MM@@######                      
+                      ++mmMM##@@####mmmmMMMMMMMMMMmmmmMMMMMM@@@@####@@MM##@@##@@MMMMMMMMMM@@@@@@##########@@MM@@######                      
+                      mmmmMM########MMMMMMMMmmmmmmmmMMMMMMMM@@MM@@####@@@@@@@@MMMMMMMMMMMM@@@@@@##########@@MM@@######--                    
+                      mmmmMM##########mmmmMMmmMMmmmmmmmmMMMMMM##@@@@MM@@MM##@@MMMMMMMMMMMM@@@@@@##########@@MM@@@@######                    
+                      ++mmMM##########mmmmMMMMMMmmmmmmmmmmMMMM@@####MMMM##@@MMMMMMMMMMMMMM@@@@############@@MM@@@@######                    
+                      mmmmMM##########mmmmMMMMMMmmmmmmmmMMMMMMMM####MMMM##MMMMMMMMMMMMMM@@@@##############MMMMMM@@######                    

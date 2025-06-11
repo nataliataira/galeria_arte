@@ -24,11 +24,13 @@ export function mostrarMenuExpo(): void {
     console.log(`
   ✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦
   
-    1 - Mona Lisa
-    2 - O Nascimento de Vênus
-    3 - Peixes
-    4 - Tuntacamon
-    5 - Sair
+    1 - Abaporu, por Tarsila do Amaral
+    2 - Amor, por Rafael Nobre
+    3 - O Filho do Homem, por René Magritte
+    4 - Mona Lisa, por Leonardo da Vinci
+    5 - Noite Estrelada, por Vincent van Gogh
+    6 - O Nascimento de Vênus, por Sandro Botticelli
+    7 - Sair
   
   ✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦
   `);
@@ -76,7 +78,7 @@ export function lerDadosBaseObra() {
 
 export function mostrarSobre(): void {
     console.log(`
-                 Obrigado por visitar a N.Art
+    Obrigado por visitar a N.Art
   
   ✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦
     Projeto Desenvolvido por: Natalia Gomes Taira
