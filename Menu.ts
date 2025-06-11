@@ -206,30 +206,37 @@ export function main() {
                 console.log("Para uma experiência melhor, use o terminal em tela cheia");
                 let quadro = readlinesync.questionInt("Agora digite o número do quadro: ");
 
-                if (quadro === 5)  break;
+                if (quadro === 7)  break;
                 
                 switch (quadro) {
                     case 1:
-                        const path = require("path");
-                        console.log(require('fs').readFileSync(path.resolve(__dirname, "./quadros/mona_lisa.txt"), 'utf8'));
+                        console.log(require('fs').readFileSync("./quadros/abaporu.txt", 'utf8'));
                         keyPress();
                         break;
 
                     case 2:
-                        console.log(require('fs').readFileSync('./quadros/o_nascimento_de_venus.txt', 'utf8'));
+                        console.log(require('fs').readFileSync('./quadros/amor.txt', 'utf8'));
                         keyPress();
                         break;
 
                     case 3:
-                        console.log(require('fs').readFileSync('./quadros/peixes.txt', 'utf8'));
+                        console.log(require('fs').readFileSync('./quadros/magritte.txt', 'utf8'));
                         keyPress();
                         break;
 
                     case 4:
-                        console.log(require('fs').readFileSync('./quadros/tuntacamon.txt', 'utf8'));
+                        console.log(require('fs').readFileSync('./quadros/mona_lisa.txt', 'utf8'));
                         keyPress();
                         break;
 
+                    case 5:
+                        console.log(require('fs').readFileSync('./quadros/noite_estrelada.txt', 'utf8'));
+                        keyPress();
+                        break;
+                    case 6:
+                        console.log(require('fs').readFileSync('./quadros/o_nascimento_de_venus.txt', 'utf8'));
+                        keyPress();
+                        break;
                     default:
                         console.log("Opção inválida");
                         keyPress();
@@ -250,9 +257,9 @@ export function main() {
 export function sobre(): void {
     console.log("               Obrigado por visitar a N.Art\n");
     console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
-    console.log("           Projeto Desenvolvido por: Natalia Gomes Taira ");
-    console.log("          Generation Brasil - nataliagtaira@gmail.com");
-    console.log("                 https://github.com/nataliataira");
+    console.log("Projeto Desenvolvido por: Natalia Gomes Taira ");
+    console.log("Generation Brasil - nataliagtaira@gmail.com");
+    console.log("https://github.com/nataliataira");
     console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
 }
 
