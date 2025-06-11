@@ -74,6 +74,7 @@ export function main() {
                             )
                         );
 
+                        keyPress();
                         break;
             
                     case 2:
@@ -97,7 +98,7 @@ export function main() {
                                 material
                             )
                         );
-                        
+                        keyPress();
                         break;
                 }
                 break;
@@ -106,6 +107,7 @@ export function main() {
                 console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("\n\nListar todas obras de arte\n\n");
                 obras.listarTodas();
+                keyPress();
                 break;
 
             case 3:
@@ -113,6 +115,7 @@ export function main() {
                 console.log("\n\nListar obras de arte por código\n\n");
                 codigo = readlinesync.questionInt("Digite o código da obra: ");
                 obras.buscarPorId(codigo);
+                keyPress();
                 break;
 
             case 4:
@@ -156,7 +159,7 @@ export function main() {
                                     tecnica
                                 )
                             );
-
+                            keyPress();
                             break;
 
                         case 2:
@@ -180,7 +183,7 @@ export function main() {
                                     material
                                 )
                             );
-
+                            keyPress();
                             break;
                     }
 
@@ -192,6 +195,7 @@ export function main() {
                 console.log("\n\nApagar resgitro de obra de arte\n\n");
                 codigo = readlinesync.questionInt("Digite o código da obra: ");
                 obras.deletar(codigo);
+                keyPress();
                 break;
 
             case 6:
@@ -207,22 +211,27 @@ export function main() {
                     case 1:
                         const path = require("path");
                         console.log(require('fs').readFileSync(path.resolve(__dirname, "./quadros/mona_lisa.txt"), 'utf8'));
+                        keyPress();
                         break;
 
                     case 2:
                         console.log(require('fs').readFileSync('./quadros/o_nascimento_de_venus.txt', 'utf8'));
+                        keyPress();
                         break;
 
                     case 3:
                         console.log(require('fs').readFileSync('./quadros/peixes.txt', 'utf8'));
+                        keyPress();
                         break;
 
                     case 4:
                         console.log(require('fs').readFileSync('./quadros/tuntacamon.txt', 'utf8'));
+                        keyPress();
                         break;
 
                     default:
                         console.log("Opção inválida");
+                        keyPress();
                         break;
                 }
 
@@ -231,6 +240,8 @@ export function main() {
             default:
                 console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
                 console.log("Opção Inválida!");
+                keyPress();
+                break;
         }
     }
 }
@@ -242,6 +253,11 @@ export function sobre(): void {
     console.log("          Generation Brasil - nataliagtaira@gmail.com");
     console.log("                 https://github.com/nataliataira");
     console.log("✦・┈・・・・・・・・・・・・・・・・・・・・・・・・・・・┈・✦");
+}
+
+function keyPress(): void {
+    console.log("\nPressione enter para continuar...");
+    readlinesync.prompt();
 }
 
 main();
